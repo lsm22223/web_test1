@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>My Website</title>
+			<link rel="stylesheet" type="text/css" href="my_css.CSS"/>
+				<style>
+				div {
+					width: 500px; /* width of content */
+					border: 10px solid blue; /* thick style color */
+					padding: 25px;
+					margin: 25px;
+				}
+		
+				</style>
+	</head>
+	<body>
+		<h1>Welcome to my very first page in HTML</h1>
+		<blockquote>
+			For my first <strong>Web Design Page</strong> please bring the <em>laptop</em> 
+			<u>to practice the html codes</u>.
+		</blockquote>
+		
+		<h2>An unordered HTML list</h2>
+		<ul>
+			<li>Study</li>
+			<li>Practice</li>
+			<li>Play</li>
+		</ul> 
+		
+		<h2>An ordered HTML list</h2>
+		<ol>
+			<li>Study</li>
+			<li>Practice</li>
+			<li>Play</li>
+		</ol> 
+		
+		<div>
+		If you want to know me more, go to <a href="https://www.instagram.com/se_nemo_/">https://www.instagram.com/se_nemo_/</a>. 
+		</div>
+		<p>
+		<img Class="large" SRC="image.jpg" border="1"  Alt="my image">
+		<img Class="medium" SRC="image.jpg" border="1"  Alt="my image">
+		<img Class="small align-left" SRC="image.jpg" border="1" Alt="my image">
+		</p>
+		
+ 
+
+	</body>
+</html>
