@@ -1,0 +1,127 @@
+/* Navigation bar which contains texts */
+nav {
+    background-color: #300;
+    color: #fff;
+	padding: 10px;
+	margin-top:10px;
+}
+		
+/* Texts in the navigation bar */
+nav a {
+  position: relative;
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  padding: 80px;
+  height: 1px;
+
+}
+
+/* pseudo-element(white colored horizental line), width 0 to 1 */
+/* adjust bottom: 75px to put it under the text */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/*  scales the underline to full width */
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
+/*logo and searching bar goes to center(horizontally and vertically*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*background for the form*/
+.form-container {
+  
+  background-image: url('bow.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;/*only use it once or it will copied*/
+  color: white;
+}
+/*Send us a message*/
+.form-container h2{
+	color:black;
+}
+
+/*where email and our chat service are shown*/
+.contact-info{
+	
+background-color: #90AFCE;	
+}
+
+/* Styles for contact information section */
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+/*put email and chat text on the center*/
+.email, .chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for form section */
+.form-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*form for the inquiry*/
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*size the blank of the form, length of blank, type of data, border..*/
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+/*margin between blanks*/
+label {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*design of submit button, use color, decide the size of the button*/
+input[type=submit] {
+  background-color: #300;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*This shows the color difference after click*/
+input[type=submit]:hover {
+  background-color: #D44A57;
+}

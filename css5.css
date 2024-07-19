@@ -1,0 +1,158 @@
+
+/* Recommendation sign, checkmark */
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 5px;
+  height: 12px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+/* Recommendation sign box */
+.product-box {
+  position: relative;
+}
+
+/* Recommendation sign, texts */
+.recommended-sign {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  background-color: #166988;
+  color: white;
+  padding: 3px;
+  font-size: 13px;
+
+}
+
+/* product-box motion, slightly bigger and get back when customers put their mouse on them */
+.product-box {
+  transition: transform 0.3s ease-in-out;
+}
+/* 1.01=1% size increase */
+.product-box:hover {
+  transform: scale(1.01);
+}
+
+/* color of listen now button */
+.listen-now-btn:hover {
+  content: " ♪";
+  background-color: #006FED; /* Set the background color on hover */
+  color: #fff; /* Set the text color on hover */
+}
+
+
+/* ♪ appears when I put the mouse on listen now button */
+.listen-now-btn:hover::after {
+  content: " ♪";
+}
+
+
+/* Navigation bar which contains texts */
+nav {
+    background-color: #300;
+    color: #fff;
+	padding: 10px;
+	margin-top:10px;
+}
+		
+/* Texts in the navigation bar */
+nav a {
+  position: relative;
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  padding: 80px;
+  height: 1px;
+
+}
+
+/* pseudo-element(white colored horizental line), width 0 to 1 */
+/* adjust bottom: 75px to put it under the text */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/*  scales the underline to full width */
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+/*logo and searching bar goes to center(horizontally and vertically*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-box {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  margin: 20px;
+  width: 300px;
+  margin-top: 70px;
+}
+
+.product-box img {
+  display: block;
+  height: 200px;
+  margin: auto;
+  width: 300px;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h2 {
+  font-size: 24px;
+  margin-top: 0px;
+}
+
+.product-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.listen-now-btn {
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+  
+.filters{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+
+
+

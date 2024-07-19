@@ -1,0 +1,149 @@
+/* Navigation bar which contains texts */
+nav {
+    background-color: #300;
+    color: #fff;
+	padding: 10px;
+	margin-top:10px;
+}
+		
+/* Texts in the navigation bar */
+nav a {
+  position: relative;
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  padding: 80px ;
+  height:auto;
+
+}
+
+/* pseudo-element(white colored horizental line), width 0 to 1 */
+/* adjust bottom: 75px to put it under the text */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/*  scales the underline to full width */
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+nav a:not(:empty)::before {
+  display: none;
+}
+
+
+/*logo and searching bar goes to center(horizontally and vertically*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Put relative b/c I want this in full size*/
+.box {
+  position: relative;
+}
+
+/*colored blue only "create an account" part*/
+
+hyperlink{
+	color:blue;
+}
+
+/*set defalut margin, padding, box-sizing*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+
+/*container is where customers put their info. to sign in*/
+.container {
+	max-width: 500px;
+	margin: 50px auto;
+	border-radius: 7px;
+	background-color: #fff;
+	/*horizentall and vertical offset is 0, blur 7*/
+	box-shadow: 0px 0px 7px #BDBDBD;
+	/*space inside the container*/
+	padding: 25px;
+}
+
+/*where customers write their info*/
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+/*one info in one line, make the blank easier to recognize*/
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 7px;
+	border: none;
+	box-shadow: 0px 0px 7px #BDBDBD;
+}
+/*give space between checkbox and 'I agree to the policy'*/
+/*I want to give space to I agree~, but I can't. I'll try later*/
+input[type="checkbox"]{
+	margin-right: 15px;
+	margin-top:10px;
+	margin-bottom: 20px;
+
+}
+
+
+/*design for 'sign in' and 'continue with google' button*/
+button[type="submit"],
+button.google {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #006FED;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;/*make it round*/
+}
+
+
+/*space between sign in and 'continue with google' buttons*/
+.or {
+	margin: 20px 0;
+	text-align: center;
+}
+
+
+
+
+
+
+/*css for the banner on the bottom*/
+.banner {
+  background-color: #E3E3E3;
+  padding: 11px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid #B0B0B0;
+}
+
+.banner span {
+  color: #A35202;
+}
+
