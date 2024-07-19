@@ -1,0 +1,170 @@
+/* Navigation bar which contains texts */
+nav {
+    background-color: #300;
+    color: #fff;
+	padding: 10px;
+	margin-top:10px;
+	
+}
+		
+/* Texts in the navigation bar */
+nav a {
+  position: relative;
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  padding: 80px;
+  height: 1px;
+
+}
+
+/* pseudo-element(white colored horizental line), width 0 to 1 */
+/* adjust bottom: 75px to put it under the text */
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: 75px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/*  scales the underline to full width */
+nav a:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* Smooth text effect for <div class="text-overlay">*/
+/* 50px down and up, opacity 0 to 1, */
+@keyframes textMotion {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Smooth text effect for <div class="text-overlay">*/
+/* play 1sec, retain after the animation:forwards */
+.text-overlay h1 {
+  opacity: 0;
+  animation: textMotion 1s ease-in-out forwards;
+}
+
+
+
+/*JAVA motoin for the images.*/
+.motion {
+  /* Add your desired animation properties */
+  animation-name: example;
+  animation-duration: 1s;
+  /* Add any other animation properties you want */
+}
+/*JAVA motoin for the images.*/
+/* Define the animation keyframes */
+@keyframes example {
+
+  50% { transform: scale(1.01); }
+  100% { transform: scale(1.01); }
+}
+
+
+
+/*Locate searching-bar to be located on the botton-right*/
+.searching-bar {
+  position: absolute;
+  right: 50px;
+  top: 275px;
+}
+
+
+
+/*logo and searching bar goes to center(horizontally and vertically*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Put relative b/c I want this in full size*/
+.box {
+  position: relative;
+}
+/*Make the opacity background*/
+.box img {
+  display: block;
+  width: 100%;
+  height: 100%
+  height: auto;
+  opacity: 0.8;
+}
+/*Put text in the center*/
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+/**size of the text h1 and no line break**/
+.text-overlay h1{
+	font-size: 40px;
+	white-space:nowrap;
+}
+
+/*Underlined to make it as hyperlink linked to another page*/
+.text-overlay p{
+	text-decoration:underline;
+}
+
+
+.text1 h1{
+	text-align: center;
+	
+}
+
+
+/*Locate 2 images in the container in a row*/
+.bottom-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Space between 2 images, make space between images(padding)*/
+.image-box {
+  width: 50%;
+  position: relative;
+  padding: 60px;
+}
+
+/*Size of the images*/
+.image-box img {
+  width: 100%;
+  height: auto;
+  
+}
+
+/*Put the text in the center of the images*/
+.image-box-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+/**text on the image**/
+.image-box-text-overlay h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+  white-space:nowrap;
+}

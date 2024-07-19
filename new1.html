@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html	lang = "en">
+  <head>
+	<meta charset="UTF-8">
+    <title>Beloved Violin</title>
+	
+	<!--Link CSS file-->
+	<link rel="stylesheet" type="text/css" href="css1.css"> 
+
+	
+	<!-- Style the navigation bar-->
+	<!-- nav is brown color background and nav a is white color of the text inside-->
+  </head>
+  
+  <body>
+    <header>
+	
+	<!-- my logo-->
+	<div class="logo">
+	<a href="new1.html">
+	<img SRC="banner.png" Height="320" Width="640" Alt="banner">
+	
+	</div>
+	
+	<!--searching bar next to logo-->
+	<div class="searching-bar">
+	<!--can't search yet-->
+	<form action="#">
+	<!--give customers hint about what to search-->
+    <input type="text" placeholder="Violin for the beginner" name="search">
+    <button type="submit">Search</button>
+	</form>
+	</div>
+	
+    </header>
+	<!-- Navegation Bar, put # because I don't have every page for each hyperlink-->
+    <nav>
+      <a href="new1.html">Home</a>
+      <a href="new3.html">About</a>
+	  <a href="new5.html">Products</a>
+	  <a href="#">Sell your violin</a>
+      <a href="new4.html">Contact</a>
+    </nav>
+
+
+    <main>
+	<!-- put the text on the image "main"-->
+        <div class="box">
+	<!-- regard image "main" as a box to contain the text-->
+		<img src="violin.jpg" height="420" width="1430" alt="main">
+	
+	
+	<!-- text I want to overlap-->	
+		<div class="text-overlay">
+			<h1>Unleash the sound of history with our preloved violins<br> </h1>
+			<a href="new3.html"> learn more </a>
+		</div>
+		</div>
+	
+	
+	<div class="text1">
+			<h1><br><br><br><br><br><i>Browse the Beloved Violin</i><br>-<br><br> </h1>
+	</div>
+	
+	<!-- First image on the bottom with overlapped text-->
+	<div class="bottom-images">
+	<!-- When they put the mouse on, images will become slightly bigger-->
+	<div class="image-box"  onmouseover="addMotion(this)" onmouseout="removeMotion(this)">
+    <a href="new2.html">
+	<img src="violins.jpg" alt="box 1"></a>
+	
+		<div class="image-box-text-overlay">
+		<h2>Sign Up & Check out the latest offer</h2>
+		</div>
+	</div>
+	
+	
+
+	<!-- Second image on the bottom with overlapped text-->
+	
+	<div class="image-box" onmouseover="addMotion(this)" onmouseout="removeMotion(this)">
+		<img src="closeviolin.jpg" alt="box 2">
+		
+		<div class="image-box-text-overlay">
+		<h2>How to Sell Your Violin</h2>
+		</div>
+	</div>
+ 
+	</div>	
+      
+	  
+	  
+    </main>
+	<!--copy right-->	
+    <footer>
+      <p>&copy; 2023 Beloved Violin</p>
+    </footer>
+	
+	<!--JAVA: Motion using JAVA when customers put their mouse on the images-->
+	<script>
+	function addMotion(element) {
+		element.classList.add('motion');
+	}
+
+	function removeMotion(element) {
+		element.classList.remove('motion');
+	}
+	</script>
+	
+	
+
+
+  </body>
+</html>
